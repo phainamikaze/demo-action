@@ -16,3 +16,8 @@ jobs:
         run: |
           ls ${{ github.workspace }}
       - run: echo "🍏 This job's status is ${{ job.status }}."
+  job2-node-version:
+    needs: Explore-GitHub-Actions
+    runs-on: ubuntu-latest
+    steps:
+      - run: node -v
